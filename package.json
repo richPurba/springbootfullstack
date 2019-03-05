@@ -4,7 +4,7 @@
     "description": "Demo of ReactJS + Spring Data REST",
     "repository": {
       "type": "git",
-      "url": ""
+      "url": "https://github.com/richPurba/springbootfullstack.git"
     },
     "keywords": [
       "rest",
@@ -13,11 +13,6 @@
       "data",
       "react"
     ],
-    "author": "Greg L. Turnquist",
-    "license": "Apache-2.0",
-    "bugs": {
-      "url": "https://github.com/spring-guides/tut-react-and-spring-data-rest/issues"
-    },
     "homepage": "https://github.com/spring-guides/tut-react-and-spring-data-rest",
     "dependencies": {
       "react": "^16.5.2",
