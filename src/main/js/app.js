@@ -5,18 +5,54 @@ const client = require('./client');
 class App extends React.Component{
     constructor(props){
         super(props);
-        this.state = {employee:[]}
+        this.state = {orders:[]};
     }
 
     componentDidAmount(){
-        client({method:'GET',path:'/api/employees'}).done(
-            response => {this.setState({employees:response.entity._embedded.employees})}
+        client({method:'GET',path:'/api/orders'}).done(
+            response => {this.setState({orders:response.entity._embedded.orders})}
         );
     }
 
     render(){
         return(
-            <EmployeeList employees = {this.state.employees}/>
+            <OrderList orders = {this.state.orders}/>
         )
     }
 }
+
+class OrderList extends React.Component{
+    render(){
+        const orders = this.props.orders.map(order =>
+            <Order key={order._links.self.href} order={order} />
+            );
+            return(
+                <table> 
+                    <tbody>
+                        <tr>
+                            <th>Description</th>
+                            <th>Status</th>
+                        </tr>
+                        {orders}
+                    </tbody>
+                </table>
+            )
+    }
+}
+
+class Order extends React.Component{
+    render(){
+        return(
+            <tr>
+                <td>{this.props.order.description}</td>
+                <td>{this.props.order.status}</td>
+            </tr>
+        )
+    }
+}
+
+
+ReactDom.render(
+    <App/>,
+    document.getElementById('react')
+)

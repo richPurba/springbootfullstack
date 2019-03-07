@@ -1,5 +1,5 @@
 'use strict';
-// this fileis custom code that configures rest.js to 
+// this file is custom code that configures rest.js to 
 //include support for HAL, URI Templates, and other things. It also sets the default Accept request header to application/hal+json
 
 const rest = require('rest');
