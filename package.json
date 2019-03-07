@@ -2,19 +2,8 @@
   "name": "spring-data-rest-and-reactjs",
   "version": "0.1.0",
   "description": "Demo of ReactJS + Spring Data REST",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:richPurba/springbootfullstack.git"
-  },
-  "keywords": [
-    "rest",
-    "hateoas",
-    "spring",
-    "data",
-    "react"
-  ],
-  "homepage": "https://github.com/spring-guides/tut-react-and-spring-data-rest",
   "dependencies": {
+    "@types/rest": "^1.3.28",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "rest": "^1.3.1"
