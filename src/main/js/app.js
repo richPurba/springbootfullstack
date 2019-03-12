@@ -26,7 +26,8 @@ class OrderList extends React.Component{
         const orders = this.props.orders.map(order =>
             <Order key={order._links.self.href} order={order} />
             );
-            return(
+            const orders2 = this.props.orders;
+            return(              
                 <table> 
                     <tbody>
                         <tr>
@@ -35,6 +36,10 @@ class OrderList extends React.Component{
                         </tr>
                         {orders}
                     </tbody>
+                    
+
+                        {orders2}
+            
                 </table>
             )
     }
