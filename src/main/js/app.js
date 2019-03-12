@@ -1,3 +1,4 @@
+import '../resources/static/main.css'
 const React = require('react');
 const ReactDom = require('react-dom');
 const client = require('./client');
@@ -23,12 +24,9 @@ class App extends React.Component{
 
 class OrderList extends React.Component{
     render(){
-        const orders = this.props.orders.map(order =>
-            <Order key={order._links.self.href} order={order} />
-            );
-            const orders2 = this.props.orders;
-            return(              
-                <table> 
+        const orders = this.props.orders;
+            return(
+                <table>
                     <tbody>
                         <tr>
                             <th>Description</th>
@@ -36,10 +34,6 @@ class OrderList extends React.Component{
                         </tr>
                         {orders}
                     </tbody>
-                    
-
-                        {orders2}
-            
                 </table>
             )
     }
